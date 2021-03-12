@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import cx from 'classnames';
-import styles from './PlainButton.module.scss';
-import ThreeDotsLoadingIcon from '../icons/ThreeDotsLoadingIcon';
+import PropTypes from "prop-types";
+import React from "react";
+import cx from "classnames";
+import styles from "./PlainButton.module.scss";
+import ThreeDotsLoadingIcon from "../icons/ThreeDotsLoadingIcon";
 
 const PlainButton = ({
   className,
@@ -41,7 +41,7 @@ PlainButton.propTypes = {
 };
 
 PlainButton.defaultProps = {
-  type: 'submit',
+  type: "submit",
 };
 
 export default PlainButton;

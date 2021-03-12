@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './Input.module.scss';
-import cx from 'classnames';
-import PropTypes from 'prop-types';
-import Label from '../Label';
+import React from "react";
+import styles from "./Input.module.scss";
+import cx from "classnames";
+import PropTypes from "prop-types";
+import Label from "../Label";
 
 const Input = ({
   id,
@@ -41,10 +41,7 @@ const Input = ({
           name={name}
           ref={register}
           id={id}
-          className={cx(
-            { error: error },
-            classNameInput,
-          )}
+          className={cx({ error: error }, classNameInput)}
           type={type}
           {...props}
         />
@@ -67,7 +64,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  type: 'text',
+  type: "text",
 };
 
 export default Input;

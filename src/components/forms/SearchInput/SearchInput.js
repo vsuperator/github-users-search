@@ -1,8 +1,8 @@
-import React from 'react';
-import Input from '../Input';
-import PropTypes from 'prop-types';
-import styles from './SearchInput.module.scss';
-import Search from '../../icons/Search';
+import React from "react";
+import Input from "../Input";
+import PropTypes from "prop-types";
+import styles from "./SearchInput.module.scss";
+import Search from "../../icons/Search";
 
 const SearchInput = ({ label, name, register, error, id, onChange }) => {
   return (

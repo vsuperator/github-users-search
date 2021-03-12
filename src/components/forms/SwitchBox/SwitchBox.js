@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './SwitchBox.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./SwitchBox.module.scss";
 
-import cx from 'classnames';
-import { observer } from 'mobx-react';
+import cx from "classnames";
+import { observer } from "mobx-react";
 const SwitchBox = ({
   className,
   disabled,
@@ -20,7 +20,7 @@ const SwitchBox = ({
       className={cx(
         styles.inputWrap,
         noLabel ? styles.noLabel : styles.withLabel,
-        className,
+        className
       )}
       onClick={onClick}
     >
@@ -36,8 +36,8 @@ const SwitchBox = ({
       />
       <label
         htmlFor={id}
-        data-text-true={noLabel ? '' : 'Yes'}
-        data-text-false={noLabel ? '' : 'No'}
+        data-text-true={noLabel ? "" : "Yes"}
+        data-text-false={noLabel ? "" : "No"}
       >
         <i />
       </label>

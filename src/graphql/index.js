@@ -1,25 +1,21 @@
-import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-
-const githubToken = '06dfb85fa0a13406bcd445699992f340c9d1d1b1';
-const serverURI = 'https://api.github.com/graphql' || 'https://48p1r2roz4.sse.codesandbox.io';
+import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { GITHUB_API_URL, GITHUB_TOKEN } from "../constants";
 
 const httpLink = createHttpLink({
-    uri: serverURI,
+  uri: GITHUB_API_URL + "graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: githubToken ? `Bearer ${githubToken}` : "",
-      }
-    }
-  });
-
-
+  return {
+    headers: {
+      ...headers,
+      authorization: GITHUB_TOKEN ? `Bearer ${GITHUB_TOKEN}` : "",
+    },
+  };
+});
 
 export const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
 });

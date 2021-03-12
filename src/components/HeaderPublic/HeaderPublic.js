@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './HeaderPublic.module.scss';
-import LogoPublic from '../icons/LogoPublic';
-import cx from 'classnames';
+import React from "react";
+import styles from "./HeaderPublic.module.scss";
+import LogoPublic from "../icons/LogoPublic";
+import cx from "classnames";
 
 const HeaderPublic = ({ className }) => {
   return (

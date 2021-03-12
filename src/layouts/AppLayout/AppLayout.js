@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './AppLayout.module.scss';
-import Footer from '../../components/Footer';
-import HeaderPublic from '../../components/HeaderPublic';
-import cx from 'classnames';
+import React from "react";
+import styles from "./AppLayout.module.scss";
+import Footer from "../../components/Footer";
+import HeaderPublic from "../../components/HeaderPublic";
+import cx from "classnames";
 
 const AppLayout = ({ children, classNameContainer }) => {
   return (

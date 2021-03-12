@@ -48,12 +48,17 @@
   }
   .avatar {
     max-width: 140px;
+    border-radius: 6px;
   }
   .imgWrap {
     margin-right: 16px;
   }
   .labels {
+    display: flex;
     span {
+      display: flex;
+      align-items: center;
+      width: fit-content;
       border-radius: 5px;
       font-size: 12px;
       color: $whisper;

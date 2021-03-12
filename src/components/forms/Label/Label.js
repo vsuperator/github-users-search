@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './Label.module.scss';
-import Info from '../../icons/Info';
-import cx from 'classnames';
-import PropTypes from 'prop-types';
+import React from "react";
+import styles from "./Label.module.scss";
+import Info from "../../icons/Info";
+import cx from "classnames";
+import PropTypes from "prop-types";
 
 const Label = ({
   required,
@@ -22,7 +22,7 @@ const Label = ({
           title: title,
         },
         styles.label,
-        className,
+        className
       )}
       data-title={title}
     >

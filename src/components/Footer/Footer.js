@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from '../Footer/Footer.module.scss';
-import cx from 'classnames';
+import React from "react";
+import styles from "../Footer/Footer.module.scss";
+import cx from "classnames";
 
 const Footer = ({ className }) => {
   return (
