@@ -1,0 +1,16 @@
+@import "src/main-styling/themes";
+
+.footer {
+  @extend %verticalCenter;
+  height: 55px;
+  border-top: 1px solid $mystic;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 14px;
+  color: $riverBed;
+
+  @include phones {
+    font-size: 10px;
+    line-height: 11px;
+  }
+}

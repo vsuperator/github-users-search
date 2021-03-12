@@ -1,0 +1,60 @@
+@import "src/main-styling/themes";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $middleSmallGap;
+  position: relative;
+  width: 100%;
+
+  .inputWrap {
+    position: relative;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="textarea"],
+    input[type="number"] {
+      height: 50px;
+      @extend %inputDefault;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input.password {
+      padding-right: 40px;
+    }
+
+    .toggleShowPass {
+      padding: 0;
+      position: absolute;
+      bottom: 16px;
+      right: 12px;
+      background-color: transparent;
+      svg {
+        margin: 0;
+      }
+    }
+  }
+
+  span.error {
+    @extend %error;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  span.subInputText {
+    @extend %error;
+    color: $baliHai;
+    margin-top: 10px;
+
+    & a {
+      color: $baliHai;
+    }
+  }
+}

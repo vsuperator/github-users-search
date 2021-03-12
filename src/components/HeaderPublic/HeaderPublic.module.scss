@@ -1,0 +1,16 @@
+@import "src/main-styling/themes";
+
+.headerPublic {
+  background-color: $darkBlue;
+  margin-bottom: 0;
+
+  .containerPublic {
+    @extend %containerPublic;
+    @extend %verticalCenter;
+    justify-content: space-between;
+  }
+  .title {
+    color: $white;
+    font-weight: 600;
+  }
+}

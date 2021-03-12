@@ -1,0 +1,66 @@
+@import "src/main-styling/themes";
+
+.userItem {
+  @extend %secondBox;
+  padding: 16px 16px;
+  cursor: pointer;
+  display: flex;
+
+  h2 {
+    margin-bottom: $middleGap;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 140%;
+    color: $baliHai;
+    margin-bottom: 8px;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .statusBlock {
+    @extend %center;
+    @extend %mainBox;
+    @extend %secondaryFont;
+    @extend %lineHeight140;
+    box-shadow: inset 3px 3px 6px $cadetBlue, inset -3px -3px 6px #ffffff;
+    height: 40px;
+    width: 100%;
+    text-transform: uppercase;
+    color: $baliHai;
+    margin-top: 8px;
+  }
+
+  .requestReportButton {
+    @extend %mainButton;
+    margin-top: 8px;
+    max-width: 215px;
+    max-height: 40px;
+  }
+  .name {
+    color: $darkBlue;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+  .avatar {
+    max-width: 140px;
+  }
+  .imgWrap {
+    margin-right: 16px;
+  }
+  .labels {
+    span {
+      border-radius: 5px;
+      font-size: 12px;
+      color: $whisper;
+      padding: 4px 8px;
+      font-weight: 500;
+      background-color: $lightRed;
+      margin-right: 8px;
+    }
+  }
+}

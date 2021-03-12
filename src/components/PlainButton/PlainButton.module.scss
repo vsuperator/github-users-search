@@ -1,0 +1,18 @@
+@import "src/main-styling/themes";
+
+.button {
+  @extend %center;
+  cursor: pointer;
+  border-style: none;
+
+  & > svg {
+    margin-right: 10px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.8;
+  }
+}

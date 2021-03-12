@@ -1,0 +1,69 @@
+@import "src/main-styling/colors";
+
+.containerClassName {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  width: max-content;
+}
+
+.pageButton {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 22px;
+  height: 40px;
+  text-align: center;
+  border-top: 1px;
+  border-left: 1px;
+  border-bottom: 1px;
+  border-radius: 4px;
+  a {
+    padding: 5px 10px;
+  }
+}
+
+.nextButton {
+  cursor: pointer;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.break {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+}
+
+.previousButton {
+  cursor: pointer;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+}
+
+.paginationPageActive {
+  background-color: $lightRed;
+  a {
+    color: #ffffff !important;
+  }
+  a:hover,
+  a:active,
+  &:focus,
+  a:focus {
+    outline: none !important;
+    text-decoration: none !important;
+  }
+}

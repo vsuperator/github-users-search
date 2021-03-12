@@ -1,0 +1,16 @@
+module.exports = {
+  primary: '#00989F',
+  secondary: '#06C8D1',
+  accentLight: '#FF9981',
+  accentDark: '#E06346',
+  lightBlue: '#ADFBFF',
+  lightYellow: '#FFFECB',
+  lightRed: '#FFDBD2',
+  text: '#2E2F2F',
+  dark: '#859797',
+  light: '#D3D7DB',
+  background: '#F3F4FA',
+  lightText: '#758585',
+  lightGreen: '#D8E3EB',
+  highlight: '#F7F8FE',
+};

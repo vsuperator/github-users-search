@@ -1,0 +1,53 @@
+$extraLargeGap: 32px;
+$largeGap: 30px;
+$middleGap: 24px;
+$middleSmallGap: 20px;
+$smallGap: 16px;
+$sidebarWidth: 210px;
+$secondSidebarWidth: 305px;
+$sidebarMobileWidth: 175px;
+$contentWidth: 960px+2 * $smallGap + 1px;
+$mainContainerWidth: 1230px;
+$mainContainerPublicWidth: 1202px;
+$secondContainerWidth: 632px;
+
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin smallLaptop {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin smallTablets {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin minPhones {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
+@mixin smallPhones {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}

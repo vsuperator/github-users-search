@@ -1,0 +1,8 @@
+@import "src/main-styling/themes";
+
+label.label {
+  @extend %inputLabel;
+  .subLabel {
+    color: $manateeSecond;
+  }
+}

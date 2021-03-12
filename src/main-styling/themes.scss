@@ -1,0 +1,382 @@
+@import './colors';
+@import './staticSizes';
+
+%mainGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: $middleGap;
+  grid-row-gap: $smallGap;
+
+  @include tablets {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: $smallGap;
+    grid-row-gap: $middleSmallGap;
+  }
+}
+
+%mainBox {
+  border-radius: 8px;
+  background: $whisper;
+  @extend %mainShadow;
+}
+
+.mainBox {
+  @extend %mainBox;
+}
+
+%secondBox {
+  border-radius: 8px;
+  background: $whisper;
+  @extend %secondShadow;
+}
+%verticalCenter {
+  display: flex;
+  align-items: center;
+}
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%mainShadow {
+  box-shadow: 3px 3px 6px $ghost, -3px -3px 6px #ffffff;
+}
+
+%secondShadow {
+  box-shadow: 3px 3px 6px $cadetBlue, -3px -3px 6px #ffffff;
+}
+%thirdShadow {
+  box-shadow: 1px 1px 2px $cadetBlueSecond, -1px -1px 2px #ffffff;
+}
+
+%filterImage {
+  filter: drop-shadow(-3px -3px 6px #ffffff) drop-shadow(3px 3px 6px $ghost);
+}
+
+%resetDefaultInput {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.containerPublic {
+  max-width: $mainContainerPublicWidth;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $smallGap;
+}
+
+%containerPublic {
+  max-width: $mainContainerPublicWidth;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+%backgroundSidebar {
+  background: linear-gradient(
+    177.85deg,
+    $manatee 1.81%,
+    #5f6183 48.35%,
+    #595b7e 100%
+  );
+}
+
+a.activeItemSidebarMenu,
+a.activeItemSidebarMenu:hover {
+  background-color: $catskillWhite;
+  color: $stormGray;
+  box-shadow: inset 3px 3px 6px $cadetBlue, inset -3px -3px 6px #ffffff;
+  border-left: 4px solid $lightRed;
+  svg {
+    path {
+      fill: $lightRed;
+    }
+  }
+}
+
+/** Fonts */
+%mainFont {
+  font-size: 18px;
+  line-height: 21px;
+}
+%secondaryFont {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+%thirdFont {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.mainFont {
+  @extend %mainFont;
+}
+.secondaryFont {
+  @extend %secondaryFont;
+}
+
+%h1Font {
+  font-size: 36px;
+  line-height: 41px;
+  font-weight: 500;
+  color: $riverBed;
+}
+
+%h2Font {
+  @extend %thirdFont;
+  font-weight: 500;
+  color: $riverBed;
+}
+
+%h3Font {
+  @extend %mainFont;
+  font-weight: 500;
+  color: $riverBed;
+}
+
+%h4Font {
+  @extend %secondaryFont;
+  font-weight: 500;
+  color: $riverBed;
+}
+
+%error {
+  font-size: 12px;
+  line-height: 14px;
+  color: $lightRed;
+}
+.error {
+  @extend %error;
+}
+
+%lineHeight140 {
+  line-height: 140%;
+}
+
+%mainLink {
+  @extend %h4Font;
+  @extend %lineHeight140;
+  color: $baliHai;
+  display: inline-block;
+}
+.mainLink {
+  @extend %mainLink;
+}
+
+/** Fonts end */
+
+/** Buttons */
+
+@-webkit-keyframes go-left-right {
+  from {
+    left: 5px;
+  }
+  to {
+    left: calc(100% - 30px);
+  }
+}
+
+%mainButton {
+  @extend %h4Font;
+  @extend %mainShadow;
+  @extend %center;
+  background: $lightRed;
+  border-radius: 8px;
+  height: 50px;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+
+  &:hover {
+    @extend %mainShadow;
+    position: relative;
+
+    &:before {
+      content: '';
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+      width: 20px;
+      height: 65px;
+      position: absolute;
+      animation: go-left-right 3s infinite alternate;
+      animation-timing-function: ease;
+      animation-duration: 2s;
+    }
+  }
+
+  &:focus {
+    background: $lightRed;
+    box-shadow: inset 3px 3px 6px #ed4e46, inset -3px -3px 6px #ed4e46;
+  }
+
+  &:disabled {
+    background: rgba(255, 100, 92, 0.5);
+  }
+}
+
+%secondaryButton {
+  @extend %h4Font;
+  border: 2px solid $baliHai;
+  @extend %mainShadow;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  background: $catskillWhite;
+  color: $baliHai;
+
+  &:hover {
+    background: $baliHai;
+    color: white;
+    border: none;
+  }
+
+  &:focus {
+    color: white;
+    background: $baliHai;
+    box-shadow: inset 3px 3px 6px #738193, inset -3px -3px 6px #738193;
+    border: none;
+  }
+}
+
+%headerButton {
+  background: $whisper;
+  border-style: none;
+  border-left: 1px solid $athensGray;
+  border-right: 1px solid $athensGray;
+  width: 84px;
+  height: 100%;
+
+  & > svg {
+    margin-right: 0;
+    path {
+      fill: $baliHai;
+    }
+  }
+  &:focus {
+    outline: none;
+    background: $catskillWhite;
+    box-shadow: inset 4px 4px 10px #c1ccda, inset -4px -4px 10px #ffffff;
+    & > svg {
+      path {
+        fill: $lightRed;
+      }
+    }
+  }
+}
+
+%backButton {
+  @extend %mainFont;
+  background: $baliHai;
+  font-weight: 500;
+  @extend %mainShadow;
+  border-radius: 8px;
+  color: white;
+  width: 87px;
+  height: 40px;
+  &:focus {
+    box-shadow: 3px 3px 6px white, -3px -3px 6px $ghost;
+  }
+}
+
+.mainButton {
+  @extend %mainButton;
+  width: 100%;
+}
+
+.secondButton {
+  @extend %secondaryButton;
+}
+
+.editButton {
+  height: min-content;
+  background-color: $baliHai;
+  border-radius: 4px;
+  padding: 5px 5px 7px 7px;
+
+  svg {
+    margin-right: 0;
+  }
+}
+
+/** Buttons end */
+
+/** Inputs  */
+
+%inputLabel {
+  @extend %h4Font;
+  @extend %verticalCenter;
+  color: $brightGray;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  &.required::before {
+    content: '*';
+  }
+  svg {
+    margin-left: 10px;
+  }
+  &.title:hover::after {
+    content: attr(data-title);
+    z-index: 1;
+    background: rgba(255, 255, 230, 0.9);
+    font-size: 11px;
+    padding: 5px 10px;
+    position: absolute;
+    left: 33%;
+    border: 1px solid #333;
+  }
+}
+
+%inputDefault {
+  @extend %mainFont;
+  background-color: $whisper;
+  border-radius: 8px;
+  border-style: none;
+  padding-left: $middleSmallGap;
+  padding-right: $middleSmallGap;
+  color: $riverBed;
+  width: 100%;
+  box-shadow: 3px 3px 6px $ghost, -3px -3px 6px #ffffff;
+
+  &:hover {
+    box-shadow: inset -3px -3px 6px #ffffff, inset 3px 3px 6px $cadetBlue;
+  }
+  &:focus {
+    @extend %mainFont;
+    outline: none;
+    border: 2px solid $manatee;
+    color: $riverBed;
+    box-shadow: 0 0 0 50px $catskillWhite inset, -3px -3px 6px #ffffff,
+      3px 3px 6px $ghost;
+    background-color: $catskillWhite;
+  }
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 50px $whisper inset, -3px -3px 6px #ffffff,
+      3px 3px 6px $ghost;
+
+    &:focus {
+      box-shadow: 0 0 0 50px $catskillWhite inset, -3px -3px 6px #ffffff,
+        3px 3px 6px $ghost;
+    }
+  }
+  &.error {
+    border: 2px solid $lightRed;
+    filter: drop-shadow(-3px -3px 6px #ffffff), drop-shadow(3px 3px 6px $ghost);
+    background-color: $catskillWhite;
+  }
+  &:disabled {
+    box-shadow: none;
+  }
+  &::placeholder {
+    font-weight: 300;
+    color: $baliHai;
+  }
+}
+
+/** Inputs end */
